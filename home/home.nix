@@ -2,7 +2,7 @@
 
 {
     imports = [
-      ./home/packages.nix
+      ./packages.nix
     ];
 
     home.username = "gkh";

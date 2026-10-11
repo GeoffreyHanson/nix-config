@@ -13,13 +13,13 @@
       nixosConfigurations.surfacebook = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./configuration.nix
+          ./hosts/surfacebook/configuration.nix
           nixos-hardware.nixosModules.microsoft-surface-common
           home-manager.nixosModules.home-manager
           {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.gkh = import ./home.nix;
+              home-manager.users.gkh = import ./home/home.nix;
           }
         ];
       };

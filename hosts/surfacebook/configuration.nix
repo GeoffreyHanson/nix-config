@@ -8,13 +8,9 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./keyboard.nix
-      ./packages.nix
+      ../../modules/keyboard.nix
+      ../../modules/packages.nix
     ];
-
-  home-manager.useGlobalPkgs = true;
-  home-manager.useUserPackages = true;
-  home-manager.users.gkh = import ./home.nix;
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
